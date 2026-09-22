@@ -1,0 +1,36 @@
+{
+  "name": "vistoria-condominios",
+  "version": "1.0.0",
+  "private": true,
+  "description": "App de vistoria de seguranca eletronica em condominios com salvamento local em JSON e fotos.",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "dev:local": "vite",
+    "server": "node server.js",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:e2e": "playwright test --project=chromium"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "latest",
+    "cors": "latest",
+    "express": "latest",
+    "framer-motion": "latest",
+    "lucide-react": "latest",
+    "multer": "^2.2.0",
+    "react": "latest",
+    "react-dom": "latest",
+    "sqlite": "latest",
+    "sqlite3": "latest",
+    "tailwindcss": "latest"
+  },
+  "devDependencies": {
+    "@playwright/test": "latest",
+    "@vitejs/plugin-react": "latest",
+    "form-data": "^4.0.6",
+    "node-fetch": "^3.3.2",
+    "playwright": "latest",
+    "vite": "latest"
+  }
+}

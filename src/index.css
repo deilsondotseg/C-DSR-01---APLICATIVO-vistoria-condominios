@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* O tema e controlado pelo botao do app, independentemente do tema do sistema operacional. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+* { box-sizing: border-box; }
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+html.dark {
+  color-scheme: dark;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+html.dark body {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+button, input, select, textarea { font-family: inherit; }
+input::placeholder, textarea::placeholder { color: #64748b; opacity: 1; }
+html.dark input::placeholder, html.dark textarea::placeholder { color: #94a3b8; }
+html.dark select option { background-color: #020617; color: #f1f5f9; }
+
+/* Mantem espaco entre o conteudo e a navegacao mobile no fluxo normal da pagina. */
+.mobile-content {
+  padding-bottom: calc(8rem + env(safe-area-inset-bottom));
+}
+.mobile-bottom-nav {
+  padding-bottom: calc(0.5rem + env(safe-area-inset-bottom));
+}
+@media (min-width: 768px) {
+  .mobile-content { padding-bottom: 2.5rem; }
+}
+@media print {
+  body { background: white !important; }
+  .print\:hidden { display: none !important; }
+}
